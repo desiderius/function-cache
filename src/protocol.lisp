@@ -84,7 +84,7 @@ Note that this returns non-nil if the key is cached but expired.")
 (defgeneric defcached-hashkey (thing)
   (:documentation "Turns a list of arguments into a valid cache-key
     (usually a tree of primatives)")
-  (:method ((thing T))
+  (:method ((thing t))
     (typecase thing
       (null nil)
       (list (iter (for i in thing)
